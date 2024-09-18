@@ -46,7 +46,7 @@ const MenuAsesora = () => {
              </svg>
            </button>
            <Link to="/asesora" className="flex ms-2 md:me-24">
-             <img src="./imagenes/adminLogo.PNG" className="h-10 me-3 relative -top-2 right-8" alt="FlowBite Logo" />
+             <img src="/images/adminLogo.PNG" className="h-10 me-3 relative -top-2 right-8" alt="FlowBite Logo" />
              <span className="self-center text-xl font-semibold sm:text-3xl whitespace -top-1 relative text-primary">Bienvenido!</span>
            </Link>
            

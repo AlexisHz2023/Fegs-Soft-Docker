@@ -1,19 +1,32 @@
 const express = require("express");
 const app = express();
-const mysql = require("mysql");
+const mysql = require('mysql2');
 const cors = require("cors");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
 const saltRounds = 10;
 
 app.use(cors());
 app.use(express.json());
 
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "fegs-soft-react"
-});
+const pool = mysql.createPool({
+    host: 'db',  // Nombre del servicio en Docker Compose
+    user: 'root',
+    password: 'fegs2024',
+    database: 'fegs-soft-react',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+  });
+
+  pool.getConnection((err, connection) => {
+    if (err) {
+      console.error('Error connecting to MySQL:', err);
+      return;
+    }
+    console.log('Connected to MySQL');
+    connection.release();
+  });
+
 
 app.post("/create", async (req, res) => {
     const { Nombre, Correo, Documento, Clave, rol } = req.body;
@@ -55,7 +68,7 @@ app.post("/create", async (req, res) => {
 app.post("/login", (req, res) => {
     const { email, password } = req.body;
 
-    db.query(
+    pool.query(
         'SELECT * FROM usuarios WHERE Correo = ?',
         [email],
         async (err, result) => {
@@ -714,6 +727,6 @@ app.post("/NuevoBeneficio", (req, res) => {
     });
   });
 
-app.listen(3001, () => {
-    console.log("Corriendo en el puerto 3001");
+app.listen(3000, () => {
+    console.log("Corriendo en el puerto 3000");
 });

@@ -23,7 +23,7 @@ const Ajustes = () => {
 });
 
 useEffect(() => {
-  axios.get('http://localhost:3001/usuarios')
+  axios.get('http://localhost:3000/usuarios')
       .then(response => setUserData(response.data))
       .catch(error => console.error('Error:', error));
 }, []);

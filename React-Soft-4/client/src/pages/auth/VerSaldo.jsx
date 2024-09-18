@@ -24,7 +24,7 @@ const VerSaldo = () => {
   }, [user]);
 
   const getObligatorios = () => {
-    Axios.get(`http://localhost:3001/obligatorios/${user.id}`)
+    Axios.get(`http://localhost:3000/obligatorios/${user.id}`)
       .then((response) => {
         setValores(response.data);
       })
@@ -34,7 +34,7 @@ const VerSaldo = () => {
   };
 
   const getVoluntarios = () => {
-    Axios.get(`http://localhost:3001/voluntarios/${user.id}`)
+    Axios.get(`http://localhost:3000/voluntarios/${user.id}`)
       .then((response) => {
         setVolu(response.data);
       })
@@ -44,7 +44,7 @@ const VerSaldo = () => {
   };
 
   const getCreditos = () => {
-    Axios.get(`http://localhost:3001/creditos/${user.id}`)
+    Axios.get(`http://localhost:3000/creditos/${user.id}`)
       .then((response) => {
         setCredi(response.data);
       })
@@ -73,7 +73,7 @@ const VerSaldo = () => {
         <h1 className="relative text-center text-4xl top-5">Estado De Cuenta</h1>
         <h2 className="relative text-center text-2xl top-7">CEDULA: {user.Documento}</h2>
         <h2 className="relative text-center text-2xl top-10">NOMBRE: {user.Nombre}</h2>
-        <img className="relative w-60 left-8 -top-16 max-w-full h-auto" src="./imagenes/Logo.PNG" alt="" />
+        <img className="relative w-60 left-8 -top-16 max-w-full h-auto" src="/images/Logo.PNG" alt="" />
 
         {/* Primera tabla */}
         <table id="tabla" className="border-separate border-spacing-2 border border-slate-500 absolute left-[20%] top-[24%] rounded-lg w-[30%]">

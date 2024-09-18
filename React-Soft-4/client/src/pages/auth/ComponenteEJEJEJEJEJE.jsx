@@ -18,7 +18,7 @@ export const Menu = () => {
     useEffect(() => {
         const fetchProductos = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/products');
+                const response = await axios.get('http://localhost:3000/products');
                 setProductos(response.data);
             } catch (error) {
                 console.error('Error fetching productos:', error);
@@ -31,11 +31,11 @@ export const Menu = () => {
     const handleEditarProducto = async () => {
         try {
             await axios.put(
-                `http://localhost:3001/api/products/${productoSeleccionado.id_producto}`,
+                `http://localhost:3000/api/products/${productoSeleccionado.id_producto}`,
                 productoSeleccionado
             );
 
-            const response = await axios.get('http://localhost:3001/products');
+            const response = await axios.get('http://localhost:3000/products');
             setProductos(response.data);
 
             setMostrarModal(false);

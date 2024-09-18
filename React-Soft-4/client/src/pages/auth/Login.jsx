@@ -51,7 +51,7 @@ const Login = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3001/login", {
+      const response = await axios.post("http://localhost:3000/login", {
         email,
         password
       });
@@ -180,11 +180,11 @@ const Login = () => {
       </div>
       <div className="absolute left-[40%] z-10 top-[5%] w-[55%] h-[85%] overflow-hidden bg-white rounded-r-lg">
         <img
-          src="./imagenes/Logo.PNG"
+          src="/images/Logo.PNG"
           className="relative w-[20%] top-28 left-[30%] "
         />
         <img
-          src="./imagenes/login.svg"
+          src="/images/login.svg"
           className="relative top-32 z-20 w-[65%] left-20 "
         />
         <div className="relative -top-[16%] left-[95%]">

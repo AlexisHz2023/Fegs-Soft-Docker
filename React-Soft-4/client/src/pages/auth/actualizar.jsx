@@ -42,7 +42,7 @@ const Actualizar = () => {
     <div className="flex flex-col font-sans absolute w-[60%] bg-white h-[70%] rounded-xl right-[20%] shadow-lg shadow-gray-500/40 overflow-hidden ">
       <img
         className="text-center absolute left-[25px] top-[20px] w-[18%] h-[10%]"
-        src="../imagenes/Logo.png"
+        src="/images/Logo.png"
         alt="Logo"
       ></img>
 

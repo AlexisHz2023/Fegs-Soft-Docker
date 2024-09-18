@@ -108,7 +108,7 @@ const Beneficios = () => {
 
   const add = (e) => {
     e.preventDefault()
-    Axios.post("http://localhost:3001/NuevoBligatorio", {
+    Axios.post("http://localhost:3000/NuevoBligatorio", {
       Documento: Documento,
     })
       .then(() => {
@@ -134,7 +134,7 @@ const Beneficios = () => {
 
   const addvolu = (e) => {
     e.preventDefault()
-    Axios.post("http://localhost:3001/NuevoVolu", {
+    Axios.post("http://localhost:3000/NuevoVolu", {
       DocumentoBli: DocumentoBli,
     })
       .then(() => {
@@ -160,7 +160,7 @@ const Beneficios = () => {
 
   const addcredi = (e) => {
     e.preventDefault()
-    Axios.post("http://localhost:3001/NuevoCredi", {
+    Axios.post("http://localhost:3000/NuevoCredi", {
       Documento: Documento,
     })
       .then(() => {
@@ -208,7 +208,7 @@ const Beneficios = () => {
       return;
     }
 
-    Axios.post("http://localhost:3001/NuevoBeneficio", {
+    Axios.post("http://localhost:3000/NuevoBeneficio", {
       Documento: DocumentoBene,
       tipoBeneficio: tipoBeneficio, // Asegúrate de que sea numérico
     })
@@ -238,7 +238,7 @@ const Beneficios = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const response = await Axios.get("http://localhost:3001/tblvoluntarios");
+      const response = await Axios.get("http://localhost:3000/tblvoluntarios");
       setRecords(response.data || []);
       setOriginalRecords(response.data || []);
     } catch (error) {
@@ -250,7 +250,7 @@ const Beneficios = () => {
   const fetchObligatorios = async () => {
     setLoading(true);
     try {
-      const response = await Axios.get("http://localhost:3001/tblobligatorios");
+      const response = await Axios.get("http://localhost:3000/tblobligatorios");
       setRecords(response.data || []);
       setOriginalRecords(response.data || []);
     } catch (error) {
@@ -263,7 +263,7 @@ const Beneficios = () => {
   const fetchCreditos = async () => {
     setLoading(true);
     try {
-      const response = await Axios.get("http://localhost:3001/tblcreditos");
+      const response = await Axios.get("http://localhost:3000/tblcreditos");
       setRecords(response.data || []);
       setOriginalRecords(response.data || []);
     } catch (error) {
@@ -432,7 +432,7 @@ const Beneficios = () => {
       return;
     }
   
-    Axios.put("http://localhost:3001/updateVolu", {
+    Axios.put("http://localhost:3000/updateVolu", {
       idahorros: selectedUser.idahorros,  // Asegúrate de incluir el `id`
       vista: selectedUser.vista,
       programado: selectedUser.programado,
@@ -467,7 +467,7 @@ const Beneficios = () => {
       return;
     }
   
-    Axios.put("http://localhost:3001/updateOblig", {
+    Axios.put("http://localhost:3000/updateOblig", {
       idobligatorio: selectedUser2.idobligatorio,
       ahorro_ordinario: selectedUser2.ahorro_ordinario,
       ahorro_permanente: selectedUser2.ahorro_permanente,
@@ -500,7 +500,7 @@ const Beneficios = () => {
       return;
     }
   
-    Axios.put("http://localhost:3001/updateCredi", {
+    Axios.put("http://localhost:3000/updateCredi", {
       idcreditos: selectedUser3.idcreditos,
       rotativo: selectedUser3.rotativo,
       SEC: selectedUser3.SEC,
@@ -563,7 +563,7 @@ const Beneficios = () => {
         <h1>
           <img
             className="flex items-center justify-center w-full h-full bg-cover bg-center"
-            src="./Imagenes/cargando2.gif"
+            src="/images/cargando2.gif"
             alt="Cargando"
           />
         </h1>

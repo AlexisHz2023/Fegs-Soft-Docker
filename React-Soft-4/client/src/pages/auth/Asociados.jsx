@@ -89,7 +89,7 @@ const Asociados = () => {
   }
 
   const add = () => {
-    Axios.post("http://localhost:3001/create", {
+    Axios.post("http://localhost:3000/create", {
       Nombre: values.name,
       Correo: values.email,
       Documento: values.Documento,
@@ -129,7 +129,7 @@ const Asociados = () => {
 
   const fetchData = async () => {
     try {
-      const response = await Axios.get("http://localhost:3001/asociados");
+      const response = await Axios.get("http://localhost:3000/asociados");
       setRecords(response.data || []);
       setOriginalRecords(response.data || []); // Guardar los registros originales
       setLoading(false);
@@ -162,7 +162,7 @@ const Asociados = () => {
   };
 
   const updateRecord = () => {
-    Axios.put("http://localhost:3001/updateaso", {
+    Axios.put("http://localhost:3000/updateaso", {
       id: selectedUser.id,
       Nombre: selectedUser.Nombre,
       Correo: selectedUser.Correo,
@@ -201,7 +201,7 @@ const Asociados = () => {
       confirmButtonText: "Sí, eliminar",
     }).then((result) => {
       if (result.isConfirmed) {
-        Axios.delete(`http://localhost:3001/delete/${selectedUser.id}`)
+        Axios.delete(`http://localhost:3000/delete/${selectedUser.id}`)
           .then(() => {
             fetchData();
             LimpiarCampos();
@@ -310,7 +310,7 @@ const Asociados = () => {
         <h1>
           <img
             className="flex items-center justify-center w-full h-full bg-cover bg-center"
-            src="./Imagenes/carga.gif"
+            src="/images/carga.gif"
             alt="loading"
           />
         </h1>
@@ -342,7 +342,7 @@ const Asociados = () => {
             </div>
             <div className="absolute z-0 top-96 right-80">
               <img
-                src="./imagenes/AsesoraInicio.svg"
+                src="/images/AsesoraInicio.svg"
                 className="realtive z-0"
               />
             </div>

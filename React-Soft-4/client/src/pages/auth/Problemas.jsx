@@ -23,8 +23,8 @@ const Problemas = () => {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
     <div className='absolute w-[60rem] h-[85%] -left-[160%] rounded-lg -top-[340%] bg-white z-10 shadow-2xl'>
-      <img src="./imagenes/Logo.PNG" className='w-[20%] left-5 relative top-5' />
-      <img src="./imagenes/FondoSaldo.png" className='z-0' alt="" />
+      <img src="/images/Logo.PNG" className='w-[20%] left-5 relative top-5' />
+      <img src="/images/FondoSaldo.png" className='z-0' alt="" />
       <h1 className='text-3xl text-primary -top-[750%] text-center relative'>
       
        ¿Tienes Problemas Para Ingresar?</h1> 

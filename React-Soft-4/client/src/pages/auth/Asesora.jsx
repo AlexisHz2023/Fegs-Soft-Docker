@@ -25,7 +25,7 @@ const Asesora = () => {
             </p>
          </div>
          <div className='py-0 left-24 relative '>
-         <img className='w-[100%] h-auto' src="./imagenes/AsesoraInicio.svg" alt="" />
+         <img className='w-[100%] h-auto' src="/images/AsesoraInicio.svg" alt="" />
          
          </div>
                

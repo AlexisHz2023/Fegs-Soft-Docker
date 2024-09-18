@@ -1,0 +1,53 @@
+services:
+  frontend:
+    restart: on-failure
+    build:
+      context: ./client
+    ports:
+      - "3001:3000"
+    networks:
+      - sameNetworkAsMysql
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - sameNetworkAsMysql
+    depends_on:
+      - db  # Asegura que la base de datos se inicie antes que el backend
+
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: fegs2024
+      MYSQL_DATABASE: fegs-soft-react
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - sameNetworkAsMysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - "8080:80"  # Mapea el puerto 80 del contenedor al puerto 8080 en el host
+    environment:
+      PMA_HOST: db  # El nombre del servicio de la base de datos
+      MYSQL_ROOT_PASSWORD: fegs2024  # La contraseña del root para acceder
+    depends_on:
+      - db
+    networks:
+      - sameNetworkAsMysql
+
+networks:
+  sameNetworkAsMysql:
+    driver: bridge
+
+volumes:
+  db_data:

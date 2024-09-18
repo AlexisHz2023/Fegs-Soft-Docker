@@ -35,7 +35,7 @@ const Movimientos = () => {
     try {
       console.log(rol);
       // Realiza la solicitud GET utilizando async/await
-      const response = await Axios.get("http://localhost:3001/usuario-datos", {
+      const response = await Axios.get("http://localhost:3000/usuario-datos", {
         params: {
           documento: DocumentoBene,
           beneficio: rol,
@@ -95,7 +95,7 @@ const Movimientos = () => {
         <h1>
           <img
             className="flex items-center justify-center w-full h-full bg-cover bg-center"
-            src="./Imagenes/cargando2.gif"
+            src="/images/cargando2.gif"
             alt="Cargando"
           />
         </h1>

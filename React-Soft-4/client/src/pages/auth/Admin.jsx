@@ -28,7 +28,7 @@ const Admin = () => {
     Swal.fire({
       title: "Informacion Importante!",
       icon: "info",
-      html: '<p>Bienvenido a la interfaz Usuarios Donde tendras como opcion ver a los usuarios atra vez de una tabla y Registrar nuevas Asociadas. Te explicaremos como funciona la interfaz:</p>  <br />Cuando le das click al circulo y cambia a la posicion derecha indica que esta mostrando el registro para los asociados: <img class="Derecho" src="./imagenes/RegistroUsu.PNG" /> <br/> Cuando le das click al Circulo y cambia a la posicion izquierda esta indicando que esta mostrando la tabla de todas las asesoras Registradas:<br /><img class="izquierdo" src="./imagenes/UsuariosTabla.PNG" />',
+      html: '<p>Bienvenido a la interfaz Usuarios Donde tendras como opcion ver a los usuarios atra vez de una tabla y Registrar nuevas Asociadas. Te explicaremos como funciona la interfaz:</p>  <br />Cuando le das click al circulo y cambia a la posicion derecha indica que esta mostrando el registro para los asociados: <img class="Derecho" src="/images/RegistroUsu.PNG" /> <br/> Cuando le das click al Circulo y cambia a la posicion izquierda esta indicando que esta mostrando la tabla de todas las asesoras Registradas:<br /><img class="izquierdo" src="/images/UsuariosTabla.PNG" />',
       confirmButtonText: "Continuar",
       footer: "Por favor tener encuenta esta informacion",
       width: '50%'
@@ -350,7 +350,7 @@ const Admin = () => {
               <div className="">
                 <div className="section pb-5 pt-5 pt-sm-2 text-center top-8 left-[10%] hyphens-manual flex justify-center">
                   <img
-                    src="./imagenes/HomeAdmin.svg"
+                    src="/images/HomeAdmin.svg"
                     className=" w-[50%] h-[50%] absolute top-[20%] left-[50%]"
                   />
                   <input
@@ -486,14 +486,14 @@ const Admin = () => {
                               <div className="relative right-48 top-48">
                                 <img
                                   className="mx-auto h-7 top-7 w-auto relative"
-                                  src="./imagenes/Logo3.png"
+                                  src="/images/Logo3.png"
                                 />
                                 <div className="relative mx-auto left-[230%]">
                                   <h1 className="relative right-28 text-Third">
                                     Fondo De Empleados
                                   </h1>
                                   <img
-                                    src="./imagenes/FondoSgn.svg"
+                                    src="/images/FondoSgn.svg"
                                     className="relative w-auto h-[80%] top-[10rem] right-44 tracking-tight font-bold leading-9"
                                     alt=""
                                   />

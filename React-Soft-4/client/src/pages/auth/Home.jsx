@@ -15,8 +15,8 @@ const Home = () => {
         <Menu />
         <div className="bg-white py-24 sm:py-32  top-80 relative z-0">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <img src="./imagenes/Logo2.png" className="relative left-[40%] -top-64 " />
-            <img src="./imagenes/HomeAdmin.svg" className="relative -top-96 left-28" />
+            <img src="/images/Logo2.png" className="relative left-[40%] -top-64 " />
+            <img src="/images/HomeAdmin.svg" className="relative -top-96 left-28" />
 
             <div className="relative  rounded-2xl border-2  border-gray-100 -top-80 w-[60%] h-[60%] left-[20%] shadow-2xl">
               <div className="relative w-full h-[5rem] bg-Third rounded-t-xl">
@@ -43,7 +43,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="relative -top-20">
-                  <img src="./imagenes/CuadroPrincipal.svg" className="relative z-0 left-10 w-[70%] h-[70%] -top-32 text-primary" /></div>
+                  <img src="/images/CuadroPrincipal.svg" className="relative z-0 left-10 w-[70%] h-[70%] -top-32 text-primary" /></div>
                 <div className="absolute bg-gray-50 -bottom-24 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
                   <span className="text-Third font-bold text-xs">Registrar</span>
                   <span className="text-gray-800 font-bold text-3xl">Nuevos Usuarios</span>
@@ -62,7 +62,7 @@ const Home = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="relative -top-20"><img src="./imagenes/Cuadro3.svg" className="relative z-0 left-14 w-28 h-24 -top-32 text-primary" /></div>
+                <div className="relative -top-20"><img src="/images/Cuadro3.svg" className="relative z-0 left-14 w-28 h-24 -top-32 text-primary" /></div>
                 <div className="absolute bg-gray-50 -bottom-24 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
                   <span className="text-Third font-bold text-xs">Actualizar</span>
                   <span className="text-gray-800 font-bold text-3xl">Información del Usuario</span>
@@ -84,7 +84,7 @@ const Home = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="relative -top-20"><img src="./imagenes/Cuadro2.svg" className="relative z-0 left-14 w-28 h-24 -top-32 text-primary" /></div>
+                <div className="relative -top-20"><img src="/images/Cuadro2.svg" className="relative z-0 left-14 w-28 h-24 -top-32 text-primary" /></div>
                 <div className="absolute bg-gray-50 -bottom-24 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
                   <span className="text-Third font-bold text-xs">Informacion</span>
                   <span className="text-gray-800 font-bold text-3xl">eliminar información</span>
@@ -104,7 +104,7 @@ const Home = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="relative -top-20"><img src="./imagenes/Cuadro1.svg" className="relative z-0 left-14 w-28 h-24 -top-32 text-primary" /></div>
+                <div className="relative -top-20"><img src="/images/Cuadro1.svg" className="relative z-0 left-14 w-28 h-24 -top-32 text-primary" /></div>
                 <div className="absolute bg-gray-50 -bottom-24 w-56 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
                   <span className="text-Third font-bold text-xs">Gestión</span>
                   <span className="text-gray-800 font-bold text-3xl">Gestiona a los usuarios</span>

@@ -139,7 +139,7 @@ const Menu = () => {
           </button>
           <div className="bg-white relative h-28 rounded-lg -top-[100px]">
             <img
-              src="./imagenes/adminLogo.PNG"
+              src="/images/adminLogo.PNG"
               className="w-20  h10 relative left-10 top-7"
             />
             <h1 className="text-Third left-40 text-3xl -top-2 relative">
